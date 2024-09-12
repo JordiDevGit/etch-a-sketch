@@ -3,7 +3,10 @@ const button = document.querySelector(".btn");
 createDefaultGrid();
 
 button.addEventListener("click", e =>{
-    const input = prompt("Enter how many squared cells you want: ");
+    let input = prompt("Enter how many squared cells you want, max 100: ");
+    if (input > 100){
+        input = 100;
+    }
     createNewGrid(input);
 });
 
